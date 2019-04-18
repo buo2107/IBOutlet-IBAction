@@ -15,9 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet var weightField: UITextField!
     @IBOutlet var BMILabel: UILabel!
     @IBOutlet var startButton: UIButton!
-    @IBOutlet var sportImage: UIImageView!
+    @IBOutlet var sportImageView: UIImageView!
     @IBOutlet var sportButtonSwitch: UISwitch!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var foodImageView: UIImageView!
+    @IBOutlet var alphaSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +52,10 @@ class ViewController: UIViewController {
             else {
                 descriptionLabel.text = "Good~標準身材！"
             }
+            sportButtonSwitch.isOn = false
+            buttonImageChange(false)
             //food image
+            foodImageView.image = UIImage(named: "food")
         }
         else if (bmi >= 24)
         {
@@ -66,8 +71,40 @@ class ViewController: UIViewController {
             else if(bmi >= 35) {
                 descriptionLabel.text = "請您準時收看<沈重人生>"
             }
+            sportButtonSwitch.isOn = true
+            buttonImageChange(true)
             // cannot eat image
+            foodImageView.image = UIImage(named: "cannot eat")
         }
     }
+    
+    @IBAction func buttonSwitch(_ sender: UISwitch) {
+        if(sender.isOn)
+        {
+            buttonImageChange(true)
+        }
+        else
+        {
+            buttonImageChange(false)
+        }
+    }
+    
+    func buttonImageChange(_ sender: Bool) {
+        if(sender)
+        {
+            startButton.isEnabled = true
+            startButton.setImage(UIImage(named: "button"), for: .normal)
+        }
+        else
+        {
+            startButton.isEnabled = false
+            startButton.setImage(UIImage(named: "forbid_button"), for: .normal)
+        }
+    }
+    
+    @IBAction func randomSport(_ sender: Any) {
+        
+    }
+    
 }
 

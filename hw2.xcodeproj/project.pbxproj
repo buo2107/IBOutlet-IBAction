@@ -14,6 +14,8 @@
 		57C4F9832265C2D500D5876A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C4F9812265C2D500D5876A /* LaunchScreen.storyboard */; };
 		57C4F98E2265C2D500D5876A /* hw2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C4F98D2265C2D500D5876A /* hw2Tests.swift */; };
 		57C4F9992265C2D500D5876A /* hw2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C4F9982265C2D500D5876A /* hw2UITests.swift */; };
+		57EA61AE22685EDD0095D731 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA61AD22685EDD0095D731 /* HomeViewController.swift */; };
+		57EA61B02268670F0095D731 /* SharpImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA61AF2268670F0095D731 /* SharpImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		57C4F9942265C2D500D5876A /* hw2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hw2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C4F9982265C2D500D5876A /* hw2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hw2UITests.swift; sourceTree = "<group>"; };
 		57C4F99A2265C2D500D5876A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57EA61AD22685EDD0095D731 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		57EA61AF2268670F0095D731 /* SharpImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				57C4F97F2265C2D500D5876A /* Assets.xcassets */,
 				57C4F9812265C2D500D5876A /* LaunchScreen.storyboard */,
 				57C4F9842265C2D500D5876A /* Info.plist */,
+				57EA61AD22685EDD0095D731 /* HomeViewController.swift */,
+				57EA61AF2268670F0095D731 /* SharpImageView.swift */,
 			);
 			path = hw2;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			files = (
 				57C4F97B2265C2D300D5876A /* ViewController.swift in Sources */,
 				57C4F9792265C2D300D5876A /* AppDelegate.swift in Sources */,
+				57EA61AE22685EDD0095D731 /* HomeViewController.swift in Sources */,
+				57EA61B02268670F0095D731 /* SharpImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
