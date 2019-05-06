@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet var sportButtonSwitch: UISwitch!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var foodImageView: UIImageView!
-    @IBOutlet var alphaSlider: UISlider!
+    @IBOutlet weak var timeSlider: UISlider!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
                 descriptionLabel.text = "Good~標準身材！"
             }
             sportButtonSwitch.isOn = false
+            sportImageView.image = UIImage(named: "")
             buttonImageChange(false)
             //food image
             foodImageView.image = UIImage(named: "food")
@@ -75,6 +77,7 @@ class ViewController: UIViewController {
             buttonImageChange(true)
             // cannot eat image
             foodImageView.image = UIImage(named: "cannot eat")
+            sportImageView.image = UIImage(named: "")
         }
     }
     
@@ -102,9 +105,19 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func randomSport(_ sender: Any) {
+    @IBAction func randomSport(_ sender: UIButton) {
+        foodImageView.image = UIImage(named: "")
+        let num = Int.random(in: 1...7)
+        sportImageView.image = UIImage(named: String(num))
         
+        let time = Int.random(in: 30...60)
+        timeSlider.value = Float(time)
+        timeLabel.text = String(format: "%.0f mins", (timeSlider.value))
     }
     
+    
+    @IBAction func sportTimeSlider(_ sender: UISlider) {
+        timeLabel.text = String(format: "%.0f mins", (sender.value))
+    }
 }
 
